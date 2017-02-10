@@ -1,0 +1,145 @@
+body{
+    font-family: "微软雅黑";
+    background-color: #E0E0E0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    z-index: 100;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.person-list{
+    padding-top: 44px;
+    /*margin-bottom: 40px;*/
+}
+.person-li{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+    /*padding: 10px 10px 0 10px;*/
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    /*align-content: space-around;*/
+    justify-content: space-between;
+}
+.person-msg{
+    width: 280px;
+}
+.person-msg>div{
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+/*.person-msg>div>p:first-of-type,.person-msg,.moren>div:first-of-type{*/
+    /*flex-grow: 1;*/
+/*}*/
+.otherMsg{
+    color: gray;
+    font-size: 12px;
+}
+.moren{
+    display: flex;
+    font-size: 12px;
+    color: gray;
+}
+.moren input{
+    vertical-align: middle;
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+    padding-left: 5px;
+}
+.radio>form>input{
+    margin: 0 10px 0 10px;
+    width: 25px;
+    height: 25px;
+}
+.edit-person{
+    width: 120px;
+    height: 30px;
+    border: 1px solid gainsboro;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    float: right;
+    margin: 10px 10px 0 0;
+}
+.new-weaer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: orange;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom:45px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#pullDown, #pullUp {
+    font-size: 12px;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    color:black;
+    text-align:center
+}

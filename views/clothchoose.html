@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>选择面料</title>
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/clothchoose.css">
+</head>
+<body >
+<div class="container" id="clothChoose">
+    <header>
+        <div class="iconfont icon-saoyisao"></div>
+        <div class="tittle">选择面料</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="content" >
+        <div>
+            <div class="menu" v-if="menuSeen">
+                <ul>
+                    <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                    <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                    <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                    <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="scroller">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+                <div >
+                    <div class="pro-display">
+                        <div><img :src="proDisplay.imgSrc" alt=""></div>
+                        <div>
+                            <p class="proName">{{proDisplay.proName}}</p>
+                            <p class="proPrice">￥{{proDisplay.proPrice}}</p>
+                            <p class="clothCount">可选面料：{{proDisplay.clothCount}}种</p>
+                        </div>
+                    </div>
+                    <div class="myCollections" @click="toCollect">查看我的收藏 <span>({{myCollections}})</span></div>
+                    <div >
+                        <ul class="cloth-list">
+                            <li v-for="item in clothList">
+                                <img :src="item.clothImg" alt="">
+                                <p>{{item.clothNumber}}</p>
+                                <p>{{item.clothComponent}}</p>
+                                <p>{{item.clothColor}}</p>
+                                <p>￥{{item.clothPrice}} <span @click="clothDetail">查看详情</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/clothchoose.js"></script>
+</body>
+</html>

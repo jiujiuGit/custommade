@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择参考标准尺码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/referencesize.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="referenceSize">
+        <header>
+            <div class="tittle">选择参考标准尺码</div>
+            <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+        </header>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+        <div class="note">选择标准尺码直接选择，或编辑标准尺码的净体数据</div>
+        <div class="content">
+            <ul class="size-range">
+                <li v-for="(item,index) in sizeRange"  @click="rangeChoose(index)"><p>{{item}}</p></li>
+            </ul>
+            <ul class="size-list">
+                <li v-for="items in even(sizeList)" class="size-li"><p v-for="(item,index) in items" @click="sizeChoose(item,index)">{{item}}</p></li>
+            </ul>
+
+            <div class="jtData">
+                <p> <span>{{jtSize}}</span> 的标准净体数据</p>
+                <div>
+                    <ul class="jt-left">
+                        <li>腰围至鞋底：{{jtData.ywxd}}</li>
+                        <li>下装腰围:{{jtData.xzyw}}</li>
+                        <li>大腿围:{{jtData.dtw}}</li>
+                        <li>小腿围:{{jtData.xtw}}</li>
+                    </ul>
+                    <ul class="jt-right">
+                        <li>直档:{{jtData.zd}}</li>
+                        <li>下装臀围:{{jtData.zttw}}</li>
+                        <li>膝围:{{jtData.xw}}</li>
+                        <li>脚踝围:{{jtData.jhw}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="next" @click="next">下一步</div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/referencesize.js"></script>
+</body>
+</html>

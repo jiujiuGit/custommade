@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收货地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/addrchoose.css">
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">收货地址</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content" id="wrapper">
+        <!--<div class="preloader" ><img src="../images/loading.gif" alt=""></div>-->
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <ul class="addr-list">
+                <li v-for="(item,key) in addr" class="swiper-slide">
+                    <div class="edit" @click="editAddr"> <p class="iconfont icon-bianji"></p><p>编辑</p></div>
+                    <div class="addrDtl">
+                        <p>{{item.addr}} &nbsp&nbsp <span>{{item.zipCode}}</span></p>
+                        <p>{{item.name}} <span>{{item.phoneNumber}}</span></p>
+                    </div>
+                    <div class="choose"  @click="addrChoose(key)"> <p class="iconfont icon-gou"></p></div>
+                </li>
+
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="increase" @click="newAddr">
+        <p>新增收货地址</p>
+        <p  class="iconfont icon-jia"></p>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/addrchoose.js"></script>
+</body>
+</html>

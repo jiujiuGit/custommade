@@ -1,0 +1,134 @@
+body{
+    font-family: "微软雅黑";
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+}
+header>div:first-of-type{
+    font-size: 12px;
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.image{
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+}
+.image>img{
+    width: 100%;
+}
+.inputMsg{
+    display: flex;
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.inputMsg>p{
+    width: 40px;
+    line-height: 40px;
+    background-color: #56ABE4;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+}
+.inputMsg>input{
+    border: none;
+    text-align: center;
+    background-color: #F0F0F0;
+    line-height: 40px;
+    flex-grow: 1;
+}
+.inputMsg>input:focus{
+    outline: none;
+}
+.dw{
+    margin: 0 auto;
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    color: gray;
+}
+.footer{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    line-height: 40px;
+    text-align: center;
+}
+.footer>div:first-of-type{
+    margin-right: 2px;
+}
+.footer>div{
+    flex-grow: 1;
+    text-align: center;
+    line-height: 40px;
+    bottom: 0;
+    cursor: pointer;
+}
+.prev,.next{
+    background-color: #56ABE4;
+    color: white;
+}
+.down{
+    background-color: #222222;
+    color: orange;
+}

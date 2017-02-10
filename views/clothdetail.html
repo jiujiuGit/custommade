@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面料详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/clothdetail.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+</head>
+<body>
+<div class="container" id="cloth-choose">
+    <header>
+        <div class="tittle">面料详情</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="banner"><img :src="bannerImg" alt=""></div>
+        <div class="cloth-detail">
+            <p class="name">{{clothDetail.name}} <span>商品编号（{{clothDetail.number}}）</span></p>
+            <p>颜色：{{clothDetail.color}}</p>
+            <p>成分：{{clothDetail.material}}</p>
+            <p>弹力：{{clothDetail.tanli}} <span class="tx">(什么是中弹，点我查看)</span></p>
+            <p>特性：{{clothDetail.feature}}</p>
+        </div>
+        <div class="drag-continue">
+            <div></div>
+            <div><p>继续拖动 查看详情</p></div>
+            <div></div>
+        </div>
+        <div class="bottom">
+            <div class="collect">收藏</div>
+            <div class="choose">选择该面料</div>
+        </div>
+    </div>
+    <div class="mb"></div>
+    <div class="tanxin" >
+        <div> <p class="close">X</p></div>
+        <img :src="tanImg" alt="">
+    </div>
+</div>
+<script src="../js/vue.js">
+</script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/clothdetail.js"></script>
+</body>
+</html>

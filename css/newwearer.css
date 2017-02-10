@@ -1,0 +1,163 @@
+body{
+    font-family: "微软雅黑";
+    background-color: white;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+
+}
+.delete{
+    margin-left: 10px;
+    color: red;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 44px;
+    margin:0 10px 50px 10px;
+}
+.wearerMsg{
+    padding:0 0 10px 0px;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+}
+
+/*.wearerMsg>div{*/
+/*margin-top: 10px;*/
+/*}*/
+.wearerMsg input{
+    background-color: #F0F0F0;
+    border: none;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 5px;
+}
+input:focus{
+    outline: none;
+}
+/*.wearerMsg span{*/
+/*color: orange;*/
+/*font-size: 18px;*/
+/*vertical-align: middle;*/
+/*margin-right: 5px;*/
+/*}*/
+
+
+.align-left{
+    line-height: 35px;
+    text-align: right;
+}
+.align-left span{
+    vertical-align: middle;
+    color: orange;
+    font-size: 18px;
+    margin-right: 5px;
+}
+.align-right>li,.align-left>li{
+    margin-top: 10px;
+    font-size: 14px;
+}
+select {
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+/*select::-ms-expand { display: none; }*/
+.sex input{
+    vertical-align: middle;
+    width: 15px;
+    margin-left: 10px;
+}
+.birth select{
+    font-size: 14px;
+    padding-left: 5px;
+    background-color: #F0F0F0;
+    border: none;
+    margin-top: 10px;
+    line-height: 35px;
+    height: 35px;
+    width: 85px;
+}
+/*.birth option{*/
+    /*border: 1px solid blueviolet;*/
+/*}*/
+.birth select:focus{
+    outline: none;
+}
+.birth select:first-of-type{
+    margin-right: 10px;
+}
+.down{
+    position:fixed ;
+    width: 100%;
+    background-color: #FFAB26;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    bottom: 0;
+}
+@media (min-width: 480px){
+    /*.wearerMsg{*/
+    /*padding:0 0 10px 40px;*/
+    /*}*/
+    .align-right>li,.align-left>li{
+        font-size: 14px;
+    }
+}
+@media (min-width:321px){
+
+}
+/*s*/

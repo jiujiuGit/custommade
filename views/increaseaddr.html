@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增收货地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/increaseaddr.css">
+    <link rel="stylesheet" href="../cityselect/css/main.css">
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">收货地址</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <ul>
+            <li class="consignee"><p>收货人：</p><input type="text"></li>
+            <li class="phoneNumber"><p>手机号码：</p><input type="text"></li>
+            <li><p>所在地区：</p>
+                <!--<div data-toggle="distpicker">-->
+                    <!--<select data-province="浙江省"></select>-->
+                    <!--<select data-city="杭州市"></select>-->
+                    <!--<select data-district="西湖区"></select>-->
+                <!--</div>-->
+                <div id="city_2">
+                    <select class="prov"></select>
+                    <select class="city" disabled="disabled"></select>
+                    <select class="dist" disabled="disabled"></select>
+                    <!--<ul class="prov">-->
+                        <!--<li></li>-->
+                    <!--</ul>-->
+
+                </div>
+                <!--<input name="" id="citySelect"  type="text"  class="city_input" readonly="readonly">-->
+            </li>
+            <li class="addrDtl"><p>详细地址：</p><input type="text"></li>
+            <li class="zipCode"><p>邮编：</p><input type="text"></li>
+        </ul>
+        <div class="moren" @click="moren"><p class="iconfont icon-gou" :class="{active:isMoren}"><span>设为默认地址</span></p></div>
+    </div>
+    <div class="save"  @click="save">
+        <div>保 存</div>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<!--<script src="../cityselect/js/city.min.js"></script>-->
+<script  src="../js/jquery.cityselect.js"></script>
+<script src="../js/increaseaddr.js"></script>
+<script >
+    $(function(){
+        $("#city_2").citySelect({
+            prov:"北京",
+            nodata:"none"
+        });
+    });
+</script>
+</body>
+</html>

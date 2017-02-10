@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.head{
+    position: fixed;
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+    z-index: 200;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+}
+
+.icon-saoyisao{
+    flex-grow: 0;
+}
+.search{
+    /*height: 30px;*/
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: #FAFAFB;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*margin: 0 5px 10px 5px;*/
+}
+.search>img{
+    padding: 10px;
+    width: 20px;
+    /*position: absolute;*/
+}
+.search>input{
+    margin-left:10px;
+    line-height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+}
+.search>input:focus{
+    border: none;
+    outline: none;
+}
+.icon-hanbaobao{
+    margin: 0 20px 0 10px ;
+    flex-grow: 0;
+}
+.icon-saoyisao,.icon-hanbaobao{
+    font-size: 24px;
+    line-height: 43px;
+    font-weight: 200;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.clear{
+    clear: both;
+}
+.container{
+    position: relative;
+}
+.tittle{
+    line-height: 30px;
+    font-size: 12px;
+}
+.tittle span{
+    border-left: 1px solid darkgray;
+    padding: 5px;
+}
+.tittle>p{
+    border-left: 2px solid #49B5FE;
+    padding-left: 5px;
+}
+.heighly-cus p{
+    border-left: 2px solid #FF5555;
+}
+.fast-customize span,.heighly-cus span{
+    color: gainsboro;
+}
+.heighly-cus>div:last-of-type{
+    overflow: hidden;
+}
+.heighly-cus>div>div{
+    width: 49%;
+    float: left;
+}
+.heighly-cus>div>div:last-of-type{
+    margin-left: 2%;
+}
+/*#viewport {*/
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*overflow: hidden;*/
+    /*padding-top: 40px;*/
+/*}*/
+#indicator {
+    bottom: 0px;
+    position: absolute;
+    width:90px;
+    height: 20px;
+    margin: 0px auto;
+    background-size: 20px;
+}
+#dotty{
+    position: absolute;
+    z-index: 200;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: grey;
+    margin-left: 20px;
+
+}
+#dottyblack>li:not(:first-of-type){
+    margin-left: 30px;
+}
+#dottyblack{
+    margin-left: 20px;
+    position: relative;
+    width: 110px;
+    height: 20px;
+    /*margin: 10px auto;*/
+    z-index: 1;
+    /*border: 1px solid red;*/
+}
+#dottyblack>li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /*margin-left: 19px;*/
+    background: gainsboro;
+    float: left;
+    /*bottom: -20px;*/
+}
+#wrapper {
+    width: 100%;
+    position: relative;
+    /*height: 240px;*/
+    padding-top: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#scroller {
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width:300%;
+    /*height: 240px;*/
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+
+}
+
+.slide {
+    width: calc(100%/3);
+    /*height: 240px;*/
+    float: left;
+}
+.painting {
+    width: 100%;
+    height: auto;
+}
+.painting>img{
+    width: 100%;
+    height: 100%;
+}
+.fast-customize,.heighly-cus,.fast-customize img,.heighly-cus img{
+    width: 100%;
+}
+#banner{
+    background-color: #E0E0E0;
+    position: relative;
+}

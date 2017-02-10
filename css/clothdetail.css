@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    position: relative;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.banner{
+    margin-bottom: 5px;
+    /*padding-top: 40px;*/
+    text-align: center;
+}
+.banner>img{
+    width: 100%;
+    max-width: 370px;
+}
+.cloth-detail{
+    font-size: 12px;
+    /*margin: 10px 0 10px 10px;*/
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+    line-height: 25px;
+    /*padding: 0 0 10px 10px;*/
+}
+.cloth-detail>p{
+    margin-left: 5px;
+}
+.cloth-detail>p:not(:first-of-type){
+    color: #585858;
+}
+.name{
+    font-size: 14px;
+}
+.cloth-detail>p:nth-of-type(4)>span{
+    color: #B7B7B7;
+}
+.drag-continue{
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    line-height: 43px;
+    color: grey;
+    margin-bottom: 45px;
+}
+.drag-continue>div:first-of-type,.drag-continue>div:last-of-type{
+    height: 1px;
+    background-color: grey;
+    flex-grow: 1;
+}
+.drag-continue>div:nth-of-type(2){
+    margin: 0 20px 0 20px;
+    flex-grow: 0;
+}
+.bottom{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    color: white;
+    border-top: 1px solid gainsboro;
+    line-height: 40px;
+    text-align: center;
+    z-index: 100;
+}
+.choose{
+    background-color: #FFAB26;
+    flex-grow: 3;
+}
+.collect{
+    flex-grow: 1;
+    color: #FFAB26;
+    background-color: white;
+}
+.mb{
+    width: 100%;
+    background-color: #333333;
+    opacity: 0.5;
+    position: absolute;
+    /*margin-bottom: -460px;*/
+    height: 100%;
+    top: 0px;
+    z-index: 500;
+    display: none;
+    margin: auto;    /* 有了这个就自动居中了 */
+}
+.tanxin{
+    position: absolute;
+    z-index: 600;
+    width: 100%;
+    max-width: 820px;
+    background-color: white;
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.tanxin>img{
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.tanxin>div{
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+    text-align: left;
+}
+.tanxin>div>p{
+    margin-left: 10px;
+}
+.close{
+    margin: 0px;
+}

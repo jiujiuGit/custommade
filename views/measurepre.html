@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测量前的准备</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/measurepre.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="measurePre">
+    <header>
+        <div class="tittle">测量前的准备</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="pre"><img src="../images/cl.jpg" alt=""></div>
+        <p><span>↓</span>确认服装的面料弹力</p>
+        <div>
+            <ul class="tlChoose tlChoose1">
+                <li  class=" active iconfont icon-gou " ><span class="active">无弹</span></li>
+                <li class="iconfont icon-gou"><span>微弹</span></li>
+            </ul>
+            <ul class="tlChoose tlChoose2">
+                <li class="iconfont icon-gou"><span>中弹</span></li>
+                <li class="iconfont icon-gou"><span>高弹</span></li>
+            </ul>
+        </div>
+        <p> <span>↓</span>弹力说明</p>
+        <div class="preGif"><img src="../images/tlsm.gif" alt=""></div>
+    </div>
+    <div class="next" @click="celiang">开始测量</div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/measurepre.js"></script>
+</body>
+</html>

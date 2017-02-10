@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>定制列表</title>
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/totallist.css">
+
+    <!--<script type="text/javascript">-->
+        <!--var myScroll;-->
+        <!--function loaded () {-->
+            <!--myScroll = new IScroll('#wrapper', { mouseWheel: true });-->
+        <!--}-->
+        <!--document.addEventListener('touchmove', function (e) {-->
+            <!--document.getElementsByClassName('preloader')[0].style.display='block'-->
+            <!--e.preventDefault();-->
+        <!--}, false);-->
+        <!--document.addEventListener('touchend', function (e) {-->
+            <!--setTimeout(function(){-->
+                <!--document.getElementsByClassName('preloader')[0].style.display='none'-->
+            <!--},500)-->
+
+        <!--}, false);-->
+    <!--</script>-->
+</head>
+<body >
+<div class="container" id="totalList">
+    <header>
+        <div class="head">
+            <div ><p class="iconfont icon-saoyisao"></p> </div>
+            <div class="search"><img src="../images/index/search.png" alt=""><input type="text" placeholder="查找款式、款号"></div>
+            <div @click="reverse" class="hamburger"><p class="iconfont icon-hanbaobao"></p></div>
+        </div>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content" >
+        <ul class="group-bar">
+            <li @click="group(this)" class="active:isActive">全部</li>
+            <li @click="group(this)" class="active:isActive">牛仔裤</li>
+            <li @click="group(this)" class="active:isActive">休闲裤</li>
+        </ul>
+        <div id="wrapper">
+            <div class="item-list" id="scroller">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+                <ul>
+                    <li v-for="item in totalList">
+                        <a :href="item.imgHerf"><img :src="item.imgSrc" alt=""></a>
+                        <p>{{item.proName}}</p>
+                        <p>商品编号：{{item.proNum}}</p>
+                        <p class="proPrice">￥{{item.proPrice}}</p>
+                    </li>
+                </ul>
+                <div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/totallist.js"></script>
+<!--<script src="../js/main.js"></script>-->
+</body>
+</html>

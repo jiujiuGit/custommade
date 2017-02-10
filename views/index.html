@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../iscroll5.1.1/iscroll5.1.1/build/iscroll.js"></script>
+    <script type="text/javascript">
+        var myScroll;
+        function loaded () {
+            myScroll = new IScroll('#wrapper', {
+                preventDefault:false,
+                scrollX: true,
+                scrollY: false,
+                momentum: false,
+                snap: true,
+                snapSpeed: 400,
+                keyBindings: true,
+                indicators: {
+                    el: document.getElementById('indicator'),
+                    resize: false
+                }
+            });
+        }
+//        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body onload="loaded()">
+<div class="container" id="index">
+    <header>
+        <div class="head">
+            <div ><p class="iconfont icon-saoyisao"></p> </div>
+            <div class="search"><img src="../images/index/search.png" alt=""><input type="text" placeholder="查找款式、款号"></div>
+            <div @click="reverse" class="hamburger"><p class="iconfont icon-hanbaobao"></p></div>
+        </div>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-wodedingdan"><a :href="menuHerf.myOrder"><span>我的订单</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="banner">
+        <div id="wrapper">
+            <div id="scroller">
+                <div class="slide" v-for="(item,key) in swipeInfo">
+                    <div class="painting" @click="bannerTo(key)">
+                        <img :src="item.src" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="indicator">
+            <div id="dotty"></div>
+            <ul id="dottyblack">
+                <li ></li>
+                <li ></li>
+                <li ></li>
+            </ul>
+        </div>
+    </div>
+    <div class="fast-customize">
+            <div class="tittle"><p>快捷定制 <span>个性定制 只差一步</span></p></div>
+            <div><a :href="fastCus.href"><img :src="fastCus.fstSrc" alt=""></a></div>
+        </div>
+    <div class="heighly-cus">
+            <div class="tittle"><p>高级定制 <span>个性定制 只差一步</span></p></div>
+            <div>
+                <div ><a :href="heighlyCus.href1"><img :src="heighlyCus.imgSrc1" alt=""></a></div>
+                <div><a :href="heighlyCus.href2"><img :src="heighlyCus.imgSrc2" alt=""></a></div>
+            </div>
+        </div>
+    <!--</div>-->
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/index.js"></script>
+
+</body>
+</html>

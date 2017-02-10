@@ -1,0 +1,103 @@
+body{
+    font-family: "微软雅黑";
+    background-color: #F0F0F0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+    font-size: 16px;
+}
+header>div:first-of-type{
+
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 40px;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.mine-ul{
+    width: 100%;
+    font-size: 14px;
+}
+.mine-ul>li{
+    border-bottom: 1px solid gainsboro;
+    display: flex;
+    padding: 0 15px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.mine-ul>li>p:first-of-type{
+    flex-grow: 1;
+}
+.mine-ul>li:first-of-type{
+    margin: 0 15px;
+    padding: 0;
+}
+.mine-ul>li:nth-of-type(2){
+    line-height: 30px;
+}
+.mine-ul>li:nth-of-type(2)>div{
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    color: gray;
+}
+.mine-ul>li:nth-of-type(2)>div span{
+    color: orange;
+}
+.mine-ul>li>p:last-of-type{
+    color: gray;
+}

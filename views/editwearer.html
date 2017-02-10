@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑穿衣人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/editwearer.css">
+
+</head>
+<body>
+<div class="container" id="editWearer">
+    <form action="">
+        <header>
+            <div class="delete">删除</div>
+            <div class="tittle">编辑穿衣人</div>
+            <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+        </header>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="wearerMsg">
+                <!--<div><input type="text"></div>-->
+                <!--<div><input type="text"></div>-->
+                <!--<div class="sex"></div>-->
+                <!--<div></div>-->
+                <!--<div></div>-->
+                <!--<div class="birth"></div>-->
+                    <ul class="align-left">
+                        <li><span>*</span>姓名：</li>
+                        <li>手机：</li>
+                        <li><span>*</span>性别：</li>
+                        <li><span>*</span>身高：</li>
+                        <li><span>*</span>体重：</li>
+                        <li>出生年月：</li>
+                    </ul>
+                    <ul class="align-right">
+                        <li><input type="text"></li>
+                        <li><input type="text"></li>
+                        <li class="sex">男<input type="radio" name="sex"> 女 <input type="radio" name="sex"></li>
+                        <li><input type="text">cm</li>
+                        <li><input type="text">kg</li>
+                        <li class="birth"><input type="text">年 <input type="text">月</li>
+                    </ul>
+            </div>
+            <div class="tx">
+                <p class="tx-tittle">体型特征</p>
+                <div>
+                    <div class="tx-table tuixing">
+                        <p>腿型</p>
+                        <ul>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/4499cf9.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                        </ul>
+                    </div>
+                    <div class="tx-table duxing">
+                        <p>肚型</p>
+                        <ul>
+                            <li><img src="../images/duxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/duxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/duxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                        </ul>
+                    </div>
+                    <div class="tx-table tunxing">
+                        <p>臀型</p>
+                        <ul>
+                            <li><img src="../images/tunxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/tunxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/tunxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                        </ul>
+                    </div>
+                    <div class="tx-table jianxing">
+                        <p>肩型</p>
+                        <ul>
+                            <li><img src="../images/jianxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/jianxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/jianxin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                        </ul>
+                    </div>
+                    <div class="tx-table beixing">
+                        <p>背型</p>
+                        <ul>
+                            <li><img src="../images/beixin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/beixin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                            <li><img src="../images/beixin.jpg" alt=""><p class="iconfont icon-gou"></p></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="tx-photo">体型照片 <span>（非必须，但有助于定制的标准性）</span></p>
+                <div>
+                    <ul class="tx-camera">
+                        <li>
+                            <div class="camera">
+                                <!--<i class="iconfont icon-camera"></i>-->
+                                <input class="upload" id="0" type="file" accept="image" >
+                                <figure data-am-widget="figure" class="am am-figure am-figure-default am-no-layout">
+                                    <img  class="img_wrap" src="" alt="">
+                                </figure>
+                            </div>
+
+                            <p>正面</p>
+                        </li>
+                        <li>
+                            <div class="camera">
+                                <!--<i class="iconfont icon-camera"></i>-->
+                                <input class="upload" id="1" type="file" accept="image" >
+                                <figure data-am-widget="figure" class="am am-figure am-figure-default am-no-layout">
+                                    <img  class="img_wrap" src="" alt="">
+                                </figure>
+                            </div>
+                            <p>侧面</p>
+                        </li>
+                        <li>
+                            <div class="camera">
+                                <!--<i class="iconfont icon-camera"></i>-->
+                                <input class="upload" id="2" type="file" accept="image" >
+                                <figure data-am-widget="figure" class="am am-figure am-figure-default am-no-layout">
+                                    <img  class="img_wrap" src="" alt="">
+                                </figure>
+                            </div>
+                            <p>背面</p>
+                        </li>
+                    </ul>
+                    <div class="upload-photos">上传全部照片</div>
+                </div>
+            </div>
+        </div>
+        <div class="save">保存</div>
+    </form>
+    <!--<figure >-->
+        <!--<img  class="img_wrap" src="" alt="">-->
+    <!--</figure>-->
+<!--<div style="width: 100px;height: 100px;background-color: red;position: relative">-->
+    <!--<p style="width: 100px;height: 100px;background-color: green;position: absolute">lalalala</p>-->
+    <!--<figure style="width: 100px;height: 100px;background-color: blue;position: absolute">-->
+        <!--<img src="" alt="">-->
+    <!--</figure>-->
+<!--</div>-->
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/editwearer.js"></script>
+<script src="../js/camera.js"></script>
+<!--<script>-->
+    <!--$(document).ready( function(){ demo_h5_upload_ops.init(); } );-->
+<!--</script>-->
+</body>
+</html>

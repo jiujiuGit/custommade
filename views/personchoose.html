@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>穿衣人列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/personchoose.css">
+</head>
+<body>
+<div class="container" id="person-choose">
+    <header>
+        <div class="tittle">选择穿衣人</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="person-list" id="wrapper">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <ul >
+                <li class="person-li" v-for="item in personMsg">
+                    <div class="flex">
+                        <div class="person-msg">
+                            <div>
+                                <p class="name">{{item.name}}</p>
+                                <p class="phone">{{item.phone}}</p>
+                            </div>
+                            <p class="otherMsg">{{item.otherMsg}}</p>
+                            <div  class="moren">
+                                <div><input type="radio" name="moren" ><span>设为默认</span></div>
+                                <div class="body-tz"><a href="shape.html">查看体型特征></a></div>
+                            </div>
+                        </div>
+                        <div class="radio">
+                            <form action=""><input type="radio" ></form></div>
+                    </div>
+                    <div class="edit-person"> 编辑穿衣人</div>
+                </li>
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+    <a href="newwearer.html">
+        <div class="new-weaer">新建穿衣人</div>
+    </a>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/personchoose.js"></script>
+</body>
+</html>

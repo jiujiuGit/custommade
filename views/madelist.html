@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级定制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/madelist.css">
+</head>
+<body>
+<div class="container" id="madelist" v-cloak>
+    <header>
+        <div class="tittle">高级定制</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <div class="banner"><img :src="bannerImg" alt=""></div>
+            <ul class="custom-list">
+                <li v-for="item in fastList">
+                    <a :href="item.imgHerf"><img :src="item.imgSrc" alt=""></a>
+                    <p>{{item.proName}}</p>
+                    <p>商品编号：{{item.proNum}}</p>
+                    <p class="proPrice">￥{{item.proPrice}}</p>
+                </li>
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpLabel">上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/madelist.js"></script>
+<script>
+    $(".tittle").on("click",function(){
+        $.ajax()
+        layer.msg('Hello layer');
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的优惠券</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/coupon.css">
+
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">我的优惠券</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="choose">
+            <p><span>未使用</span></p>
+            <p><span>已使用</span></p>
+            <p><span>已过期</span></p>
+        </div>
+        <div id="wrapper">
+            <div id="scroller">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+                <ul class="couponList">
+                    <li v-for="item in couponList">
+                        <div><p>代金券</p></div>
+                        <div class="couponDtl">
+                            <p>￥{{item.price}}  <span>{{item.price}}元代金券</span></p>
+                            <p>{{item.channel}}</p>
+                            <p>有效期至：{{item.term}}</p>
+                        </div>
+                        <div class="erweima"><span></span><img :src="item.QRCode" alt=""></div>
+                    </li>
+                </ul>
+                <div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/coupon.js"></script>
+</body>
+</html>

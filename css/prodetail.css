@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.container{
+    padding: 0 1px 0 1px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.head{
+    position: fixed;
+    /*padding: 5px 10px 5px 10px;*/
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid gainsboro;
+}
+.tittle{
+    flex-grow: 1;
+    line-height: 43px;
+
+}
+.hamburger{
+    flex-grow: 0;
+    margin-right: 20px;
+}
+.icon-hanbaobao{
+    font-size: 20px;
+    line-height: 43px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+/*.swipe{*/
+    /*padding-top:43px ;*/
+    /*width: 100%;*/
+    /*position: relative;*/
+    /*display: inherit;*/
+    /*overflow: hidden;*/
+/*}*/
+/*#swipe-wrap{*/
+    /*!*position: absolute;*!*/
+    /*width: 300%;*/
+    /*!*margin-left: -100%;*!*/
+    /*overflow: hidden;*/
+    /*-webkit-transition: 0.8s;*/
+/*}*/
+/*.swipe-item{*/
+    /*width: 33.3%;*/
+    /*height: auto;*/
+    /*text-align: center;*/
+    /*float:left;*/
+/*}*/
+/*.swipe-item img,.fast-customize img,.heighly-cus>div>div img{*/
+    /*max-width: 480px;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+/*}*/
+.clear{
+    clear: both;
+}
+/*.pagination{*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*bottom:20px;*/
+    /*z-index: 100;*/
+/*}*/
+/*.pagination>div{*/
+    /*float: left;*/
+    /*margin-left: 10px;*/
+    /*width: 10px;*/
+    /*height: 10px;*/
+    /*border-radius: 50%;*/
+    /*background-color: gainsboro;*/
+/*}*/
+.pro-describe{
+    border-top: 1px solid gainsboro;
+    padding: 0 10px 10px 10px;
+    line-height: 30px;
+    align-items: center;
+}
+.price-cloth{
+    display: flex;
+    align-items: center;
+    color: orangered;
+}
+.pro-price{
+    flex-grow: 1;
+}
+.pro-name{
+    font-size: 13px;
+}
+.cloth-choose{
+    flex-grow: 0;
+    color: grey;
+    font-size: 12px;
+}
+.promise>ul{
+    list-style: none;
+    line-height: 35px;
+    padding: 0 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #FFAB26;
+    border: 1px solid gainsboro;
+}
+.promise>ul>li>span{
+    font-size: 12px;
+    color: grey;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+.drag-continue{
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    line-height: 43px;
+    color: grey;
+}
+.drag-continue>div:first-of-type,.drag-continue>div:last-of-type{
+    height: 1px;
+    background-color: grey;
+    flex-grow: 1;
+}
+.drag-continue>div:nth-of-type(2){
+    margin: 0 20px 0 20px;
+    flex-grow: 0;
+}
+.pic-tittle>p:first-of-type{
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.pic-tittle>p:last-of-type{
+    font-size: 12px;
+    line-height: 20px;
+    color: grey;
+    margin: 10px 20px 5px 20px;
+    border-bottom: 1px solid gainsboro;
+}
+.imagelist>li>img{
+    width: 100%;
+    max-width: 350px;
+}
+.imagelist>li{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+.imagelist>li:last-of-type{
+    margin-bottom: 45px;
+}
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid gainsboro;
+    color: #FFAB26;
+    line-height: 45px;
+    text-align: center;
+}
+.collect{
+    width: 30%;
+    background-color: white;
+}
+.toCustomize{
+    width: 70%;
+    background-color: black;
+}
+
+#indicator {
+    bottom: 0px;
+    position: absolute;
+    /*top: 10px;*/
+    /*left: 10px;*/
+    width:90px;
+    height: 20px;
+    margin: 0px auto;
+    /*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUGCDYztyDUJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGFBMVEUAAADNzc3Nzc3Nzc3Nzc3Nzc3Nzc3///8aWwwLAAAABnRSTlMAX5Ks3/nRD0HIAAAAAWJLR0QHFmGI6wAAAFtJREFUGFdjYGBgEHYNMWRAAJE0IHCEc5nSwEABxleD8JOgXMY0KBCA8FlgfAcIXwzGT4TwzWD8ZAjfDcZPgfDDYPxU7Hx09ejmoduH7h5096L7B8O/6OGBGl4APYg8TQ0XAScAAAAASUVORK5CYII=);*/
+    background-size: 20px;
+}
+#dotty{
+    position: absolute;
+    z-index: 200;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: grey;
+    margin-left: 20px;
+
+}
+#dottyblack>li:not(:first-of-type){
+    margin-left: 30px;
+}
+#dottyblack{
+    margin-left: 20px;
+    position: relative;
+    width: 110px;
+    height: 20px;
+    /*margin: 10px auto;*/
+    z-index: 1;
+    /*border: 1px solid red;*/
+}
+#dottyblack>li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /*margin-left: 19px;*/
+    background: gainsboro;
+    float: left;
+    /*bottom: -20px;*/
+}
+#wrapper {
+    width: 100%;
+    position: relative;
+    /*height: 240px;*/
+    padding-top: 40px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#scroller {
+
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width:300%;
+    /*height: 240px;*/
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+
+}
+
+.slide {
+    width: calc(100%/3);
+    /*height: 240px;*/
+    float: left;
+}
+.painting {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: white;
+}
+.painting>img{
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+}
+#banner{
+    background-color: #E0E0E0;
+    position: relative;
+}

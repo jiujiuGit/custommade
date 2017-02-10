@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择个性需求</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/personalneeds.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="personalNeeds">
+    <form action="">
+        <header>
+            <div class="tittle">选择个性需求</div>
+            <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+        </header>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="stereotype">
+                <div>
+                    <p>选择版型</p>
+                    <p >什么是版型？</p>
+                </div>
+                <ul class="list-ul">
+                    <li v-for="item in stereotype">
+                        <img :src="item.imgSrc" alt="">
+                        <p class="iconfont icon-gou"></p>
+                        <p>{{item.name}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="ohers">
+                <div>
+                    <p>其他要求</p>
+                </div>
+                <ul class="list-ul">
+                    <li v-for="item in others">
+                        <img :src="item.imgSrc" alt="">
+                        <p class="iconfont icon-gou"></p>
+                        <p>{{item.name}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="save">完成</div>
+    </form>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/personalneeds.js"></script>
+</body>
+</html>

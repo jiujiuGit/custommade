@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定制商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/custommall.css">
+</head>
+<body>
+<div class="container" id="customMall" v-cloak>
+    <header>
+        <div class="head">
+            <div ><p class="iconfont icon-saoyisao"></p> </div>
+            <div class="search"><img src="../images/index/search.png" alt=""><input type="text" placeholder="查找款式、款号"></div>
+            <div @click="reverse" class="hamburger"><p class="iconfont icon-hanbaobao"></p></div>
+        </div>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-wodedingdan"><a :href="menuHerf.myOrder"><span>我的订单</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <div class="choose">
+            <div @click="all"><span>全部</span></div>
+            <div @click="jeans"><span>牛仔裤</span></div>
+            <div @click="casual"><span>休闲裤</span></div>
+        </div>
+
+        <div id="wrapper">
+            <div id="scroller">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+
+                <ul class="pro-ul" id="thelist">
+                    <li v-for="item in fastList">
+                        <a :href="item.imgHerf"><img :src="item.imgSrc" alt=""></a>
+                        <p>{{item.proName}}</p>
+                        <p>商品编号：{{item.proNum}}</p>
+                        <p class="proPrice">￥{{item.proPrice}}</p>
+                    </li>
+                </ul>
+                <div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/custommall.js"></script>
+</body>
+</html>

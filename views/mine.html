@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">我</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div>
+            <ul class="mine-ul">
+                <li @click="myOrder"><p>我的订单</p> <p class="iconfont icon-icon"></p></li>
+                <li>
+                    <div><p class="iconfont icon-daifukuan"></p><p>代付款 <span>({{order.waitPay}})</span></p></div>
+                    <div><p class="iconfont icon-daishouhuo"></p><p>待收货 <span>({{order.waitSend}})</span></p></div>
+                    <div><p class="iconfont icon-dingdanyiwancheng"></p><p>已完成 <span>({{order.down}})</span></p></div>
+                </li>
+                <li @click="toCoupon"><p>我的优惠券</p><p>{{coupon}}张可用</p><span class="iconfont icon-icon"></span></li>
+                <li @click="toCollect"><p>我的收藏</p><p>您一共收藏了{{collect.ks}}种款式，{{collect.ml}}种面料</p><span class="iconfont icon-icon"></span></li>
+                <li @click="toWearer"><p>穿衣人</p><p>{{wearer}}个穿衣人</p><span class="iconfont icon-icon"></span></li>
+                <li @click="toAddr"><p>收货地址</p><p>{{addr}}个收货地址</p><span class="iconfont icon-icon"></span></li>
+                <li ><p>账号管理</p><p>账号绑定</p><span class="iconfont icon-icon"></span></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/mine.js"></script>
+</body>
+</html>

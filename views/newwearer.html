@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建穿衣人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/newwearer.css">
+
+</head>
+<body>
+<div class="container" id="newWearer">
+    <form action="">
+        <header>
+            <div class="tittle">新建穿衣人</div>
+            <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+        </header>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="wearerMsg">
+                <!--<div><input type="text"></div>-->
+                <!--<div><input type="text"></div>-->
+                <!--<div class="sex"></div>-->
+                <!--<div></div>-->
+                <!--<div></div>-->
+                <!--<div class="birth"></div>-->
+                <ul class="align-left">
+                    <li><span>*</span>姓名：</li>
+                    <li>手机：</li>
+                    <li><span>*</span>性别：</li>
+                    <li><span>*</span>身高：</li>
+                    <li><span>*</span>体重：</li>
+                    <li>出生年月：</li>
+                </ul>
+                <ul class="align-right">
+                    <li><input type="text"></li>
+                    <li><input type="text"></li>
+                    <li class="sex">男<input type="radio" name="sex"> 女 <input type="radio" name="sex"></li>
+                    <li><input type="text">cm</li>
+                    <li><input type="text">kg</li>
+                    <li class="birth">
+                        <span></span>
+                        <select name="" id="year">
+                            <option value="">请选择</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2016">2016</option>
+                        </select>年
+                        <select name="" id="month">
+                            <option value="">请选择</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select> 月</li>
+                    <!--<li class="birth"><input type="text">年 <input type="text">月</li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="down">完成</div>
+    </form>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/newwearer.js"></script>
+</body>
+</html>

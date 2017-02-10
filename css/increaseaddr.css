@@ -1,0 +1,154 @@
+body{
+    font-family: "微软雅黑";
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+    font-size: 16px;
+}
+header>div:first-of-type{
+    padding-left: 10px;
+}
+.tittle{
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: white;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 22px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 44px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+.content>ul>li{
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    line-height: 40px;
+}
+.content>ul>li>p{
+    color: gray;
+    width: 75px;
+    font-size: 14px;
+    text-align: right;
+}
+.content>ul>li>input{
+    flex-grow: 1;
+    border: none;
+}
+.content>ul>li>input:focus{
+    outline: none;
+}
+.moren>p{
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.moren>p>span{
+    padding-left: 10px;
+    color: grey;
+}
+.icon-gou{
+    color: gainsboro;
+}
+.active{
+    color: orange;
+}
+.save{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: orange;
+    background-color: black;
+    text-align: center;
+    font-size: 16px;
+}
+#city_2>select{
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 1000;*/
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: none;
+
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+#city_2>select:focus{
+    outline: none;
+}
+#city_2>select>option{
+    border: none;
+    line-height: 30px;
+    width: 500px;
+}
+/*#city_2{*/
+    /*width: 100%;*/
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*background-color: white;*/
+    /*z-index: 1000;*/
+    /*height: 100%;*/
+    /*overflow: scroll;*/
+
+/*}*/
+/*#city_2>ul{*/
+    /*padding-left: 10px;*/
+
+/*}*/
+/*#city_2>ul>li{*/
+    /*width: 100%;*/
+    /*line-height: 45px;*/
+    /*border-bottom: 1px solid gainsboro;*/
+/*}*/

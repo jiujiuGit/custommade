@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/orderdtl.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">订单详情</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="orderDtl">
+            <ul>
+                <li><p>订单状态：</p><p>{{orderDtl.state}}</p></li>
+                <li><p>订单金额：</p><p>￥{{orderDtl.totalPrice}}</p></li>
+                <li><p>订单编号：</p><p>{{orderDtl.orderNumber}}</p></li>
+                <li><p>下单时间：</p><p>{{orderDtl.time}}</p></li>
+            </ul>
+        </div>
+        <div class="shouhuo">
+            <p>收货地址：<span>{{orderDtl.addr}}</span></p>
+            <p>收货人：<span>{{orderDtl.consignee}}</span></p>
+        </div>
+        <div class="note">
+            <p>备注：<span>{{orderDtl.note}}</span></p>
+        </div>
+        <div class="reason">
+            <p>取消原因：<span>{{orderDtl.reason}}</span></p>
+        </div>
+        <div class="product">
+            <p class="">生产状态</p>
+            <div class="proDtl" @click="toDetail">
+                <div><img :src="orderDtl.imgSrc" alt=""></div>
+                <div>
+                    <p>{{orderDtl.proName}}(商品编号：{{orderDtl.proNumber}})</p>
+                    <p>面料：{{orderDtl.ml}}</p>
+                </div>
+                <div>
+                    <p>￥{{orderDtl.proPrice}}</p>
+                    <p>X {{orderDtl.amount}}</p>
+                </div>
+                <div class="iconfont icon-icon"></div>
+            </div>
+        </div>
+        <div>
+            <ul class="price">
+                <li><p>商品总额</p><p>￥{{orderDtl.totalPrice}}</p></li>
+                <li><p>定制费</p><p>￥{{orderDtl.customCost}}</p></li>
+                <li><p>运费</p><p>￥{{orderDtl.freight}}</p></li>
+                <li><p>优惠</p><p>-￥{{orderDtl.yh}}</p></li>
+                <li><p>实付金额</p><p>￥{{orderDtl.payMoney}}</p></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/orderdtl.js"></script>
+</body>
+</html>

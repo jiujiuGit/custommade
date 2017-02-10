@@ -1,0 +1,171 @@
+html{
+    /*font-size: 600%;*/
+}
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: "微软雅黑";
+    font-size: 12px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+header{
+    font-size: 14px;
+    position: fixed;
+    display: flex;
+    height: 45px;
+    border-bottom: 1px solid gainsboro;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 0 0 10px;
+    line-height: 45px;
+    background-color: white;
+    z-index: 200;
+    top: 0;
+}
+.tittle{
+    flex-grow: 1;
+    vertical-align: middle;
+    text-align: center;
+}
+.icon-hanbaobao{
+    font-size: 20xpx;
+    margin-right: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 55px;
+    /*margin: 10px 14px 0 14px;*/
+
+    /*position: relative;*/
+}
+.pro-display{
+    display: flex;
+    border: 1px solid gainsboro;
+    margin: 10px 14px 0 14px;
+}
+.pro-display>div:last-of-type{
+    margin: 10px 0 0 10px;
+    line-height: 25px;
+}
+.proName{
+    font-size: 14px;
+}
+.proPrice{
+    color: orangered;
+    font-size: 16px;
+}
+.clothCount{
+    font-size: 12px;
+    color: gray;
+}
+.myCollections{
+    float: right;
+    line-height: 30px;
+    font-size: 14px;
+    margin-right: 14px;
+}
+.myCollections>span{
+    color: orange;
+}
+.cloth-list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    margin-right: 14px;
+}
+.cloth-list>li{
+    margin: 10px 0 0 14px;
+    width: 150px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 24px;
+    border: 1px solid gainsboro;
+}
+.cloth-list>li>img{
+    width: 100%;
+    height: auto;
+}
+.cloth-list>li>p{
+    padding-left: 10px;
+}
+.cloth-list>li>p:nth-of-type(2),.cloth-list>li>p:nth-of-type(3){
+    color: gray;
+}
+.cloth-list>li>p:last-of-type{
+    font-size: 16px;
+    margin-top: 20px;
+    color: orange;
+}
+.cloth-list>li>p:last-of-type>span{
+    margin-left: 20px;
+    color: #49B5FE;
+    font-size: 14px;
+}
+
+/*@media (device-height:568px) and (-webkit-min-device-pixel-ratio:2){*/
+    /*html {*/
+    /*font-size: 500%;*/
+    /*}*/
+/*}*/
+@media only screen and (min-width: 480px) {
+    .cloth-list{
+        justify-content: flex-start;
+    }
+
+}
+@media only screen and (max-width: 320px){
+    .cloth-list>li>p:last-of-type>span{
+        margin-left: 10px;
+    }
+    .cloth-list>li{
+        width: 135px;
+    }
+}
+#wrapper {
+    position:absolute;
+    top:45px;
+    bottom:0px;
+    left:0;
+    width:100%;
+}
+
+#pullDown, #pullUp {
+    font-size: 12px;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    color:black;
+    text-align:center
+}

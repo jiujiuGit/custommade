@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单结算</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/order.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+</head>
+<body>
+<div class="container" id="dataConfirm">
+    <header>
+        <div class="tittle">订单结算</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="consignee" @click="consignee">
+            <div class="consignee-left">
+                <p> <span class="iconfont icon-shouhuorenzhuanhuan"></span><span>收货人</span></p>
+                <p>上海 上海 浦东 康桥 700 </p>
+            </div>
+            <div class="consignee-center"><span class="iconfont icon-shouji"></span><span>18039293948</span></div>
+            <div class="consignee-right"> <p class="iconfont icon-icon"></p></div>
+        </div>
+        <div class="orderDtl">
+            <div class="proImg"><img src="../images/custom/4b75c9e.png" alt=""></div>
+            <div class="proMsg">
+                <p>女基本牛仔裤 （商品编号：1299371）</p>
+                <p>面料：腈纶98% 涤纶2%</p>
+                <p>穿衣人：小明</p>
+            </div>
+            <div class="price">
+                <p>￥299</p>
+                <p>X1</p>
+            </div>
+        </div>
+        <div class="payWay" @click="payWay">
+            <p>支付方式</p>
+            <div>
+                <p><span class="iconfont icon-weixin"></span><span>微信支付</span></p>
+                <p class="iconfont icon-gou" :class="{active:paywayActive}"></p>
+            </div>
+        </div>
+        <div class="invoice" >
+            <div @click="invoice">
+                <p>开具发票</p>
+                <p class="iconfont icon-gou " :class="{active:invoiceActive}"></p>
+            </div>
+            <div class="invoiceType" v-if="invoiceType">
+                <span>类型</span>
+                <p class="iconfont icon-gou " @click="personal" :class="{active:personalActive}"><span>个人</span></p>
+                <p class="iconfont icon-gou " @click="company" :class="{active:companyActive}"><span>公司</span></p>
+            </div>
+            <div class="taitou" v-if="companyActive">
+                <p>抬头</p>
+                <input type="text" placeholder="请输入公司名称">
+            </div>
+        </div>
+        <div class="note">
+            <!--<input type="text" placeholder="请给我们留言，50字以内">-->
+            <textarea name="note" id="" cols="30" rows="10" placeholder="请给我们留言，50字以内"></textarea>
+        </div>
+        <div class="coupon" @click="coupon">
+            <p>选择优惠券/红包</p>
+            <p>1张可用 <span class="iconfont icon-icon"></span> </p>
+        </div>
+        <div class="priceDtl">
+            <ul>
+                <li><p>商品总价</p></li>
+                <li><p>定制费</p></li>
+                <li><p>运费</p> </li>
+                <li><p>优惠</p></li>
+            </ul>
+            <ul>
+                <li v-for="item in price">￥{{item}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div>实付款：￥299.0</div>
+        <div>提交订单</div>
+
+    </div>
+    <!--<div class="next" @click="next()">下一项</div>-->
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/collect.css">
+
+</head>
+<body>
+<div class="container" id="collection">
+    <header>
+        <div class="tittle">我的收藏</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="choose">
+            <p @click="style"><span>款 式</span></p>
+            <p @click="ml"><span>面 料</span></p>
+        </div>
+        <div id="wrapper">
+            <div id="scroller">
+                <div id="pullDown">
+                    <span class="pullDownLabel">下拉刷新</span>
+                </div>
+                <ul class="styleList" v-if="styleSeen">
+                    <li v-for="item in styles">
+                        <div class="img"><img :src="item.imgSrc" alt=""></div>
+                        <div>
+                            <p class="name">{{item.proName}}</p>
+                            <p class="number">商品编号：{{item.proNumber}}</p>
+                            <div class="price">
+                                <p>{{item.proPrice}}</p>
+                                <p class="iconfont icon-hert"></p>
+                            </div>
+                        </div>
+                        <div class="customize" @click="toCustomize">立即定制</div>
+                    </li>
+                </ul>
+                <ul class="mlList" v-if="mlSeen">
+                    <li v-for="item in material">
+                        <div class="img"><img :src="item.imgSrc" alt=""></div>
+                        <div>
+                            <img src="" alt="">
+                            <p class="name">{{item.proName}}</p>
+                            <p class="number">商品编号：{{item.proNumber}}</p>
+                            <div class="price">
+                                <p>{{item.proPrice}}</p>
+                                <p class="iconfont icon-hert" @click="toCustomize"></p>
+                            </div>
+                        </div>
+                        <div class="customize">立即定制</div>
+                    </li>
+                </ul>
+                <div id="pullUp">
+                    <span class="pullUpLabel">上拉加载更多</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/collect.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+[v-cloak]{
+    display: none;
+}
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    z-index: 2;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 14px;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.banner{
+    margin-bottom: 5px;
+}
+.banner>img{
+    width: 100%;
+}
+.custom-list{
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.custom-list li{
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    width: 168px;
+    border: 1px solid gainsboro;
+}
+.custom-list li img{
+    width: 100%;
+}
+.custom-list li>p{
+    padding: 0 5px 0 5px;
+}
+.proPrice{
+    color: orange;
+}
+@media screen and (max-width: 320px) {
+    .custom-list li{
+        width: 150px;
+    }
+}
+
+#wrapper {
+    position:absolute;
+    top:45px;
+    bottom:0px;
+    left:0;
+    width:100%
+}
+
+#pullDown, #pullUp {
+    font-size: 12px;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    color:black;
+    text-align:center
+}
+

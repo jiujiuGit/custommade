@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background-color: #F0F0F0;
+    font-family: "微软雅黑";
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.head{
+    position: fixed;
+    padding: 5px 10px 5px 10px;
+    width: 100%;
+    z-index: 200;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+}
+/*.head>div{*/
+/*margin: 0 auto;*/
+/*}*/
+.icon-saoyisao{
+    flex-grow: 0;
+}
+.search{
+    /*height: 30px;*/
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*margin: 0 5px 10px 5px;*/
+}
+.search>img{
+    padding: 10px;
+    width: 20px;
+    /*position: absolute;*/
+}
+.search>input{
+    margin-left:10px;
+    line-height: 40px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    width: inherit;
+}
+.search>input:focus{
+    border: none;
+    outline: none;
+}
+.icon-hanbaobao{
+    margin: 0 20px 0 10px ;
+    flex-grow: 0;
+}
+.icon-saoyisao,.icon-hanbaobao{
+    font-size: 24px;
+    line-height: 43px;
+    font-weight: 200;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+/*.content{*/
+    /*padding-top: 55px;*/
+/*}*/
+.group-bar{
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    line-height: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 54px;
+    z-index: 100;
+}
+.group-bar>li{
+    flex-grow: 1;
+}
+.group-bar>li:first-of-type{
+    color: orange;
+}
+.group-bar>li:not(:nth-of-type(1)){
+    border-left: 1px solid gainsboro;
+}
+/*#pullDown{*/
+    /*padding-top: 20px;*/
+    /*display: none;*/
+    /*text-align: center;*/
+/*}*/
+.item-list{
+    padding-top: 95px;
+}
+.item-list>ul{
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item-list li{
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    width: 168px;
+    border: 1px solid gainsboro;
+    background-color: white;
+}
+.item-list li img{
+    width: 100%;
+}
+.item-list li>p{
+    padding: 0 5px 0 5px;
+}
+.proPrice{
+    color: orangered;
+}
+@media screen and (max-width: 320px) {
+    .item-list li {
+        width: 150px;
+    }
+}
+.active{
+    color: orange;
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom:0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#pullDown, #pullUp {
+    font-size: 12px;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    color:black;
+    text-align:center
+}

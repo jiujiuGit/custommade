@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物袋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/shopbag.css">
+
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div @click="manage" class="manage">管理</div>
+        <div class="tittle">购物袋</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content" id="wrapper">
+        <div id="scroller">
+            <div id="pullDown">
+                <span class="pullDownLabel">下拉刷新</span>
+            </div>
+            <ul class="shopList">
+                <li v-for="(item,key) in shopBagData">
+                    <div>
+                        <p class="iconfont icon-gou active" isactive="noactive" @click="checked(key)"></p>
+                        <div class="img"><img :src="item.imgSrc" alt=""></div>
+                        <div class="proDtl" @click="customize">
+                            <p>{{item.proName}} （商品编号：{{item.proNumber}}）</p>
+                            <p>面料：{{item.proMaterial}}</p>
+                            <p>穿衣人：{{item.wearer}}</p>
+                        </div>
+                        <div class="iconfont icon-icon right">  </div>
+                    </div>
+                    <div>
+                        <p class="subtotal">小计：￥{{item.price*item.amount}}</p>
+                        <div class="edit"><p class="reduce" @click="reduce(key)">-</p><input @blur="setData(key)" class="amount" type="text" :value="item.amount"><p @click="increase(key)" class="increase">+</p></div>
+                    </div>
+                </li>
+            </ul>
+            <!--<div id="pullUp">-->
+                <!--<span class="pullUpLabel">上拉加载更多</span>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="checkAll"  @click="checkAll"><span allchecked="notchecked" class="iconfont icon-gou"></span>全选</div>
+        <div class="totalPrice" ><div v-if="totalSeen">合计：<span>￥{{totalPrice}}</span><p>不含定制费、运费</p></div></div>
+        <div class="toPay" v-if="totalSeen">去结算 <span>({{shopBagData.length}})</span></div>
+        <div class="delete" v-if="!totalSeen">删除</div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/shopbag.js"></script>
+</body>
+</html>

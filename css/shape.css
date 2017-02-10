@@ -1,0 +1,112 @@
+body{
+    font-family: "微软雅黑";
+    background-color: #E0E0E0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 46px;
+    margin-bottom: 40px;
+}
+.person{
+    line-height: 40px;
+    background-color: white;
+    font-size: 14px;
+    padding-left: 10px;
+    color: gray;
+}
+.shape-feature,.shape-pic{
+    padding: 0 10px 10px 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.shape-pic{
+    margin-bottom: 40px;
+}
+.shape-feature>p,.shape-pic>p{
+    font-size: 14px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.shape-feature>ul,.shape-pic>ul{
+    display: flex;
+    /*align-items: flex-start;*/
+    flex-wrap: wrap;
+    margin-left: -10px;
+}
+.shape-feature>ul>li,.shape-pic>ul>li{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    margin: 10px 0 20px 0;
+    margin-left: 10px;
+}
+/*.shape-feature>ul>li:not(:first-of-type){*/
+    /**/
+/*}*/
+.shape-feature>ul>li>img,.shape-pic>ul>li>img{
+    width: 100%;
+    height: auto;
+}
+.edit-btn{
+    position:fixed ;
+    width: 100%;
+    background-color: #FFAB26;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    bottom: 0;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/myorder.css">
+
+</head>
+<body>
+<div class="container" id="addrChoose">
+    <header>
+        <div class="tittle">订单列表</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="choose">
+            <div><span>待付款 </span><span>(0)</span></div>
+            <div><span>待收货 </span><span>(0)</span></div>
+            <div><span>已完成 </span><span>(0)</span></div>
+        </div>
+        <div id="wrapper">
+           <div id="scroller">
+               <div id="pullDown">
+                   <span class="pullDownLabel">下拉刷新</span>
+               </div>
+               <ul class="order-ul">
+                   <li v-for="item in orderList">
+                       <div class="firLine">
+                           <div class="align-left">
+                               <p>状态：<span>{{item.state}}</span></p>
+                               <p>总价：<span>{{item.totalPrice}}</span></p>
+                           </div>
+                           <div class="align-right">
+                               <p @click="orderDetail">订单详情</p>
+                               <p @click="toPay">去付款</p>
+                           </div>
+                       </div>
+                       <div class="secLine">
+                           <div><img :src="item.imgSrc" alt=""></div>
+                           <div class="proDtl">
+                               <p>{{item.proName}}（商品编号：{{item.proNumber}}）</p>
+                               <p>面料：{{item.ml}}</p>
+                           </div>
+                           <div class="money"><p>￥{{item.proPrice}}</p><p>X {{item.amount}}</p></div>
+                       </div>
+                   </li>
+               </ul>
+               <div id="pullUp">
+                   <span class="pullUpLabel">上拉加载更多</span>
+               </div>
+           </div>
+        </div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/myorder.js"></script>
+</body>
+</html>

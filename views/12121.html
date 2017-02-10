@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div onclick="a()">dkoascnac</div>
+<script>
+    function a(){
+//        alert(2)
+        var arr = [{name:"jiujiu",age:"21"},{name:"cc",age:'19'}]
+        arr.map(function(index){
+            console.log(index);
+            for(var i in arr[index]){
+                console.log(i);
+            }
+        })
+    }
+</script>
+</body>
+</html>

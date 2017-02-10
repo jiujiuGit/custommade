@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iscroll练习</title>
+    <script src="../iscroll5.1.1/iscroll5.1.1/build/iscroll.js"></script>
+    <script type="text/javascript">
+
+    var myScroll;
+
+    function loaded () {
+        myScroll = new IScroll('#wrapper', {
+            preventDefault:false,
+            scrollX: true,
+            scrollY: false,
+            momentum: false,
+            snap: true,
+            snapSpeed: 400,
+            keyBindings: true,
+            indicators: {
+                el: document.getElementById('indicator'),
+                resize: false
+            }
+        });
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
+
+    <style>
+        body,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body onload="loaded()">
+<div id="wrapper">
+    <ul>
+        <li><img src="../images/index/b3de6c6.jpg" alt=""></li>
+        <li><img src="../images/index/a34362b.jpg" alt=""></li>
+        <li><img src="../images/index/a34362b.jpg" alt=""></li>
+    </ul>
+</div>
+<script src="../js/jquery-1.11.2.js"></script>
+</body>
+</html>

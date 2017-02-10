@@ -1,0 +1,121 @@
+body{
+    font-family: "微软雅黑";
+    background-color: white;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+
+}
+.delete{
+    margin-left: 10px;
+    color: red;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 44px;
+    margin:0 10px;
+}
+.banner{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+.banner>img{
+    max-width: 300px;
+}
+.detailLine{
+    background-color: #F0F0F0;
+    margin: 10px 0 ;
+    display: flex;
+    /*width: 100%;*/
+    padding: 6px;
+    font-size: 14px;
+}
+.detailLine>div:first-of-type{
+    /*margin: 6px;*/
+    width: 88px;
+    height: 88px;
+}
+.detailLine>div:first-of-type>img{
+    width: 100%;
+}
+.detailLine>div:nth-of-type(2){
+    margin: 5px;
+    flex-grow: 1;
+    line-height: 20px;
+    color: darkgray;
+}
+.detailLine>div:nth-of-type(2)>p:first-of-type{
+    color: black;
+}
+.price{
+    color: orange;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.detailLine>div:last-of-type{
+    line-height: 100px;
+    font-size: 12px;
+}
+.size{
+    font-size: 14px;
+    line-height: 40px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    color: grey;
+}
+.size>p>span{
+    color: black;
+}

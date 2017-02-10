@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>体型信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/shape.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="shape">
+    <header>
+        <div class="tittle">体型信息</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.index"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="person"><p>穿衣人:{{personName}}</p></div>
+        <div class="shape-feature">
+            <p>体型特征</p>
+            <ul>
+                <li v-for="item in shapeFeature"><img :src="item.imgSrc" alt=""><p>{{item.name}}</p></li>
+            </ul>
+
+        </div>
+        <div class="shape-pic">
+            <p>体型照片</p>
+        </div>
+    </div>
+    <a href="editwearer.html">
+        <div class="edit-btn">
+            <p>编辑体型信息</p>
+        </div>
+    </a>
+</div>
+</body>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/vue.js"></script>
+<script src="../js/shape.js"></script>
+</html>

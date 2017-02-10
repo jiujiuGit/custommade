@@ -1,0 +1,130 @@
+body{
+    font-family: "微软雅黑";
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.content{
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.pre{
+    width: 80%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.preGif{
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.pre>img,.preGif>img{
+    width: 100%;
+}
+.content>p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+}
+.content>p>span{
+    color: #49B5FE;
+}
+.tlChoose{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 2px;
+}
+.tlChoose>li{
+    flex-grow: 1;
+    height: 55px;
+    float: left;
+    line-height: 55px;
+    padding-left: 10px;
+}
+.icon-gou{
+    color: white;
+}
+.tlChoose>li>span{
+    margin-left: 10px;
+    color: white;
+}
+.tlChoose1>li:nth-of-type(1){
+    background-color: #2F6C94;
+    margin-right: 2px;
+}
+ .tlChoose1>li:nth-of-type(2){
+    background-color: #357EAD;
+}
+.tlChoose2>li:nth-of-type(1){
+    background-color: #3F90C3;
+    margin-right: 2px;
+}
+.tlChoose2>li:nth-of-type(2){
+    background-color: #579ECB;
+}
+.active{
+    color: orange;
+}
+.next{
+    position:fixed ;
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    bottom: 0;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>定制</title>
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/customize.css">
+    <script src="../iscroll5.1.1/iscroll5.1.1/build/iscroll.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded () {
+            myScroll = new IScroll('#wrapper', {
+                preventDefault:false,
+                scrollX: true,
+                scrollY: false,
+                momentum: false,
+                snap: true,
+                snapSpeed: 400,
+                keyBindings: true,
+                indicators: {
+                    el: document.getElementById('indicator'),
+                    resize: false
+                }
+            });
+        }
+        //        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+
+</head>
+<body onload="loaded()">
+<div class="container" id="customize">
+    <header>
+        <div class="head">
+            <div class="tittle">定制</div>
+            <div class="hamburger"><p @click="reverse" class="iconfont icon-hanbaobao"></p></div>
+        </div>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="banner">
+        <div id="wrapper">
+            <div id="scroller">
+                <div class="slide" v-for="(item,key) in swipeInfo">
+                    <div class="painting">
+                        <img :src="item.src" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="indicator">
+            <div id="dotty"></div>
+            <ul id="dottyblack">
+                <li ></li>
+                <li ></li>
+                <li ></li>
+            </ul>
+        </div>
+    </div>
+    <div class="pro-detail">
+        <p>{{proDetail.proName}}（商品编号{{proDetail.proNumber}}）</p>
+        <p class="proPrice">￥{{proDetail.proPrice}}</p>
+    </div>
+    <div class="cloth-choose" @click="chooseCloth">
+        <div class="align-left">
+            <p>可选面料及颜色</p>
+            <p>10种可选面料</p>
+        </div>
+        <div class="align-right">
+            <div><p>A FF04</p>
+                <p>颜色：正红</p></div>
+            <div><img src="../images/index/34ab32f.jpg" alt=""></div>
+            <div class="iconfont icon-icon"> </div>
+        </div>
+    </div>
+    <div class="pants" v-if="type == 'pants'">
+        <div class="person-choose" @click="choosePerson">
+            <div class="align-left">
+                <p>选择穿衣人</p>
+                <p>您有{{}}位穿衣人</p>
+            </div>
+            <div class="align-right">
+                <div>
+                    <p> <span>【默认】{{}}</span></p>
+                    <p>{{}}条历史定制数据</p>
+                </div>
+                <div class="iconfont icon-icon"> </div>
+            </div>
+        </div>
+        <div class="individual-needs" @click="personalneeds">
+            <div class="align-left">
+                <p>选择个性需求</p>
+                <p>选择版型与其他需求</p>
+            </div>
+            <div class="align-right">
+                <p>请选择版型/其他需求</p>
+                <div class="iconfont icon-icon"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="cloth" v-else="type == 'cloth'">
+        <div>
+            <p>卡通图案</p>
+            <div class="max">
+                <ul class="cartoonList">
+                    <li v-for="(item,key) in cartoon" @click="cartoonChoose(key)"><img :src="item" alt=""><p class="iconfont icon-gou"></p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="position">
+            <p>选择图案位置</p>
+            <div class="sample" v-for="item in even(sample)">
+                <img :src="item" alt="">
+                <p>前胸</p>
+            </div>
+        </div>
+        <div class="size">
+            <div><p>选择尺码</p><p>当前尺码数据</p></div>
+            <div>
+                <ul class="sizeUl">
+                    <li v-for="item in size">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="amount">
+        <div class="align-left">
+            <p> 定制数量</p>
+        </div>
+        <div class="align-right">
+            <button @click="reduce">-</button>
+            <input type="text" :value="amount">
+            <button @click="plus">+</button>
+        </div>
+    </div>
+    <div class="mb" v-if="mbSeen">
+        <div ></div>
+        <div class="tk">
+            <div class="methods">
+                <p @click="closeTk">X</p>
+                <p>选择测量方式</p>
+                <div @click="referencesize">
+                    <p>175</p>
+                    <div>
+                        <p>参考标准尺码</p>
+                        <p>可修改标准尺码</p>
+                    </div>
+                    <p>推荐</p>
+                </div>
+                <div @click="measurepre">
+                    <p>衣</p>
+                    <div>
+                        <p>测量已有服装 </p>
+                        <p>测量您最合身的一件服装</p>
+                    </div>
+                    <p></p>
+                </div>
+                <div @click="jt">
+                    <p>身</p>
+                    <div>
+                        <p>测量净体数据 </p>
+                        <p>根据量体帮助测量金体数据</p>
+                    </div>
+                    <p>已测</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="back">上一步</div>
+        <div class="next" @click="measureData">开始测试定制数据</div>
+    </footer>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/customize.js"></script>
+</body>
+</html>

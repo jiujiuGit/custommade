@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定制主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/celiang.css">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+
+</head>
+<body>
+<div class="container" id="celiang">
+    <header>
+        <div><a href="customize.html"> ＜定制页面 </a></div>
+        <div class="tittle" v-for="item in nameEven(pageName)">{{item}}</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="image"><img v-for="item in imgEven(imgSrc)" :src="item" alt=""></div>
+        <div>
+            <div class="inputMsg">
+                <p @click="reduce">-</p>
+                <input class="dataInput" @blur="setData" type="text" placeholder="请输入测量数据">
+                <p @click="add">+</p>
+            </div>
+            <div class="dw">
+                <p>单位：cm</p>
+                <p>进度：{{pageIndex}}/8</p>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="next" @click="next()">下一项</div>-->
+    <div class="footer">
+        <div class="prev" v-if="prevSeen" @click="prev()">上一项</div>
+        <div class="next" v-if="nextSeen"  @click="next()">下一项</div>
+        <div class="down" v-if="downSeen" @click="down">完成</div>
+    </div>
+
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/celiang.js"></script>
+</body>
+</html>

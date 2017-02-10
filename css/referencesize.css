@@ -1,0 +1,134 @@
+body{
+    font-family: "微软雅黑";
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    line-height: 40px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    text-align: center;
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    z-index: 500;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:link,a:hover,a:visited,a:active {
+    color: black !important;
+}
+.tittle{
+    flex-grow: 1;
+    font-size: 16px;
+    overflow: hidden;
+    background-color: white;
+
+}
+.delete{
+    margin-left: 10px;
+    color: red;
+}
+.icon-hanbaobao{
+    flex-grow: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.menu{
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 200;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+ul{
+    list-style: none;
+}
+.menu>ul>li{
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.menu>ul>li span{
+    padding: 10px 10px 10px 20px;
+    font-size: 14px;
+}
+.note{
+    padding-top:44px;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+}
+.size-range{
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+}
+.size-range>li{
+    margin-left: 10px;
+    line-height: 40px;
+    cursor: pointer;
+}
+.active{
+    color: orange;
+}
+.notactive{
+    color: black;
+}
+.size-list{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+.size-list>li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.size-list>li>p{
+    width: 90px;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.content{
+    margin-bottom: 50px;
+}
+.next{
+    position:fixed ;
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    bottom: 0;
+}
+.jtData{
+    width: 270px;
+    background-color: #F0F0F0;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 10px 20px 10px 10px;
+}
+.jtData span{
+    color: orange;
+}
+.jtData>div{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="myapp">
+    <template id="menu-template">
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHerf.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao"><a ><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+    </template>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/menuComponent.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定制详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/madedetail.css">
+</head>
+<body>
+<div class="container" id="madeDetail">
+    <header>
+        <div class="tittle">定制详情</div>
+        <div class="iconfont icon-hanbaobao" @click="reverse"></div>
+    </header>
+    <div class="menu" v-if="menuSeen">
+        <ul>
+            <li class=" iconfont icon-shouyeshouye"><a :href="menuHerf.index"><span>首页</span></a></li>
+            <li class=" iconfont icon-gouwudai"><a :href="menuHerf.shopBag"><span>购物袋</span></a></li>
+            <li class=" iconfont icon-wo"><a :href="menuHerf.index"><span>我</span></a></li>
+            <li class=" iconfont icon-saoyisao"><a :href="menuHerf.index"><span>扫一扫</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="banner">
+            <img src="../images/23cce45.png" alt="">
+        </div>
+        <div class="detailLine" id="proDtl">
+            <div><img src="../images/23cce45.png" alt=""></div>
+            <div>
+                <p>男水洗牛仔裤</p>
+                <p>款式编号：12324223</p>
+                <p class="price">￥ 199.0</p>
+            </div>
+            <div>X9</div>
+        </div>
+        <div  class="detailLine" id="clothDtl">
+            <div><img src="../images/custom/c1.png" alt=""></div>
+            <div>
+                <p>正黑</p>
+                <p>面料编号：2121211</p>
+                <p>颜色：正黑</p>
+                <p>成分：100%棉</p>
+            </div>
+            <div>弹力：无弹</div>
+        </div>
+        <div class="size">
+            <p>尺码：<span>165/64A</span></p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script src="../js/jquery-1.11.2.js"></script>
+<script src="../js/madedetail.js"></script>
+</html>

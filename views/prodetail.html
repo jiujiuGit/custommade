@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/iconfont/font_falzqoo8fyh3q5mi/iconfont.css">
+    <link rel="stylesheet" href="../css/prodetail.css">
+    <script src="../iscroll5.1.1/iscroll5.1.1/build/iscroll.js"></script>
+    <script type="text/javascript">
+
+        var myScroll;
+
+        function loaded () {
+            myScroll = new IScroll('#wrapper', {
+                preventDefault:false,
+                scrollX: true,
+                scrollY: false,
+                momentum: false,
+                snap: true,
+                snapSpeed: 400,
+                keyBindings: true,
+                indicators: {
+                    el: document.getElementById('indicator'),
+                    resize: false
+                }
+            });
+        }
+        //        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</head>
+<body onload="loaded()">
+<div class="container" id="prodetail">
+    <header>
+        <div class="head">
+            <div class="tittle">商品详情</div>
+            <div class="hamburger"><p @click="reverse" class="iconfont icon-hanbaobao"></p></div>
+        </div>
+        <div class="menu" v-if="menuSeen">
+            <ul>
+                <li class=" iconfont icon-shouyeshouye"><a :href="menuHref.index"><span>首页</span></a></li>
+                <li class=" iconfont icon-gouwudai"><a :href="menuHref.shopBag"><span>购物袋</span></a></li>
+                <li class=" iconfont icon-wo"><a :href="menuHref.mine"><span>我</span></a></li>
+                <li class=" iconfont icon-saoyisao" ><a ><span>扫一扫</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="banner">
+        <div id="wrapper">
+            <div id="scroller">
+                <div class="slide" v-for="(item,key) in swipeInfo">
+                    <div class="painting">
+                        <img :src="item.src" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="indicator">
+            <div id="dotty"></div>
+            <ul id="dottyblack">
+                <li ></li>
+                <li ></li>
+                <li ></li>
+            </ul>
+        </div>
+    </div>
+    <div class="pro-describe">
+        <div class="pro-name"><p>{{proDetail.proName}}商品编号：{{proDetail.proNumber}}</p></div>
+        <div class="price-cloth">
+            <div class="pro-price">￥{{proDetail.proPrice}}</div>
+            <div class="cloth-choose">可选面料{{proDetail.cloth}}种</div>
+        </div>
+        <div class=""><p>支付方式：{{proDetail.proPayWay}}</p></div>
+    </div>
+    <div class="promise">
+        <ul>
+            <li class="iconfont icon-gou"><span>全场包邮</span></li>
+            <li class="iconfont icon-gou"><span>正品保证</span></li>
+            <li class="iconfont icon-gou"><span>七天退换</span></li>
+        </ul>
+    </div>
+    <div class="drag-continue">
+        <div></div>
+        <div><p>继续拖动 查看详情</p></div>
+        <div></div>
+    </div>
+    <div>
+        <div class="pic-tittle"><p>图文详情</p> <p>细节展示</p></div>
+        <div >
+            <ul class="imagelist">
+                <li v-for="item in picDetail"><img :src="item.imgSrc" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="collect">收藏</div>
+        <div class="toCustomize" @click="toCustomize">立即定制</div>
+    </footer>
+</div>
+<script src="../js/vue.js"></script>
+<script src="../js/prodetail.js"></script>
+</body>
+</html>
