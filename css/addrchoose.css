@@ -6,6 +6,9 @@ body{
 /*html,body,.container,.content{*/
     /*height: 100%;*/
 /*}*/
+[v-cloak]{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;

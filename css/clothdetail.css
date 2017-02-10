@@ -5,6 +5,9 @@
 html{
     height: 100%;
 }
+[v-cloak]{
+    display: none;
+}
 body{
     position: relative;
     height: 100%;

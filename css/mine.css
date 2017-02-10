@@ -3,6 +3,9 @@ body{
     background-color: #F0F0F0;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+[v-cloak]{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
